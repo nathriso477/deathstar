@@ -42,7 +42,7 @@ namespace CSGO_B_exicute
             g.Clear(Color.Black);
             Thread.Sleep(2000);
             g.DrawString("GOOD LUCK", dnewFont, newBrush, 200, 40);
-            g.Clear(Color.Black);    
+            g.Clear(Color.Black);     
                
 
 
