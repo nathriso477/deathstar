@@ -30,20 +30,61 @@ namespace CSGO_B_exicute
             SolidBrush drawBrush = new SolidBrush(Color.LimeGreen);
             Font dnewFont = new Font("Times New Roman", 20, FontStyle.Regular);
             SolidBrush newBrush = new SolidBrush(Color.LimeGreen);
+            Pen drawPen = new Pen(Color.White, 2);
+            Pen blackkPen = new Pen(Color.Black, 2);
+            SolidBrush blackBrush = new SolidBrush(Color.Black);
+
+            //Thread.Sleep(500);
+            //g.DrawString("Here is your task:", drawFont, drawBrush, 10, 10);
+            //Thread.Sleep(1500);
+            //g.DrawString("Attack the death star using your lazers to take down there sheilds", drawFont, drawBrush, 10, 50);
+            //Thread.Sleep(2000);
+            //g.DrawString("Then, use your torbedoes to destroy the death star.", drawFont, drawBrush, 10, 90);
+            //Thread.Sleep(2000);
+            //g.Clear(Color.Black);
+            //Thread.Sleep(2000);
+            //g.DrawString("GOOD LUCK", dnewFont, newBrush, 200, 40);
+            //Thread.Sleep(1000);
+            //g.Clear(Color.Black);
+
+            //g.DrawEllipse(drawPen, 100, 100, 250, 250);
+            //g.DrawRectangle(drawPen, 215, 100, 25, 100);
+            //g.FillRectangle(blackBrush, 215, 76, 25, 25);
+
+            int y = 45;
+            
+            //test
+            for (int x = this.Width - 10; x >= 195; x = x - 1)
+            {
+                //act
+                g.Clear(Color.Black);
+                g.DrawPie(drawPen, x, y, 50, 50, 20, 40);
+                Thread.Sleep(10);
+                g.DrawEllipse(drawPen, 100, 100, 250, 250);
+                g.DrawRectangle(drawPen, 215, 100, 25, 100);
+                g.FillRectangle(blackBrush, 215, 93, 25, 25);
+
+            }
+            int bomby = 45;
+
+            //test
+
+                   while (y == 195 && bomby > 200 )
+            {
+
+                //act
+                Thread.Sleep(10);
+                g.Clear(Color.Black);
+                g.FillEllipse(drawBrush, 195, bomby, 25, 25);
+                g.DrawPie(drawPen, 215,45, 50, 50, 20, 40);
+                g.DrawEllipse(drawPen, 100, 100, 250, 250);
+                g.DrawRectangle(drawPen, 215, 100, 25, 100);
+                g.FillRectangle(blackBrush, 215, 93, 25, 25);
+                bomby++;
 
 
-            Thread.Sleep(500);
-            g.DrawString("Here is your task:", drawFont, drawBrush, 10, 10);
-            Thread.Sleep(1500);
-            g.DrawString("Attack the death star using your lazers to take down there sheilds", drawFont, drawBrush, 10, 50);
-            Thread.Sleep(2000);
-            g.DrawString("Then, use your torbedoes to destroy the death star.", drawFont, drawBrush, 10, 90);
-            Thread.Sleep(2000);
-            g.Clear(Color.Black);
-            Thread.Sleep(2000);
-            g.DrawString("GOOD LUCK", dnewFont, newBrush, 200, 40);
-            g.Clear(Color.Black);     
-               
+            }
+
 
 
 
