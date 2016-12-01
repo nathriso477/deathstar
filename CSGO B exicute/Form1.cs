@@ -17,7 +17,7 @@ namespace CSGO_B_exicute
         {
             InitializeComponent();
 
-            
+
         }
 
         private void Form1_Click(object sender, EventArgs e)
@@ -52,35 +52,48 @@ namespace CSGO_B_exicute
             //g.FillRectangle(blackBrush, 215, 76, 25, 25);
 
             int y = 45;
-            
+
             //test
             for (int x = this.Width - 10; x >= 195; x = x - 1)
             {
                 //act
                 g.Clear(Color.Black);
                 g.DrawPie(drawPen, x, y, 50, 50, 20, 40);
-                Thread.Sleep(10);
                 g.DrawEllipse(drawPen, 100, 100, 250, 250);
                 g.DrawRectangle(drawPen, 215, 100, 25, 100);
                 g.FillRectangle(blackBrush, 215, 93, 25, 25);
-
+                Thread.Sleep(10);
             }
             int bomby = 45;
 
             //test
 
-                   while (y == 195 && bomby > 200 )
+            while (bomby < 190)
             {
 
                 //act
                 Thread.Sleep(10);
                 g.Clear(Color.Black);
-                g.FillEllipse(drawBrush, 195, bomby, 25, 25);
-                g.DrawPie(drawPen, 215,45, 50, 50, 20, 40);
+                g.FillEllipse(drawBrush, 215, bomby, 25, 25);
+                g.DrawPie(drawPen, 215, 45, 50, 50, 20, 40);
                 g.DrawEllipse(drawPen, 100, 100, 250, 250);
                 g.DrawRectangle(drawPen, 215, 100, 25, 100);
                 g.FillRectangle(blackBrush, 215, 93, 25, 25);
+
                 bomby++;
+
+            }
+            for (int x = 1; x < 50; x++)
+            {
+                //act
+                Thread.Sleep(10);
+                g.Clear(Color.Black);
+                g.FillEllipse(drawBrush, 50 - x / 2, 150 - x / 2, 10 + x, 10 + x);
+                g.DrawPie(drawPen, 215, 45, 50, 50, 20, 40);
+                g.DrawEllipse(drawPen, 100, 100, 250, 250);
+                g.DrawRectangle(drawPen, 215, 100, 25, 100);
+                g.FillRectangle(blackBrush, 215, 93, 25, 25);  
+                
 
 
             }
@@ -99,7 +112,7 @@ namespace CSGO_B_exicute
 
 
 
-
+            
         }
     }
 }
