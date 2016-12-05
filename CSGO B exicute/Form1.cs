@@ -23,7 +23,7 @@ namespace CSGO_B_exicute
         private void Form1_Click(object sender, EventArgs e)
         {
 
-
+            // graphics and strings
             Graphics g = this.CreateGraphics();
             g.Clear(Color.Black);
             Font drawFont = new Font("Times New Roman", 12, FontStyle.Regular);
@@ -33,7 +33,7 @@ namespace CSGO_B_exicute
             Pen drawPen = new Pen(Color.White, 2);
             Pen blackkPen = new Pen(Color.Black, 2);
             SolidBrush blackBrush = new SolidBrush(Color.Black);
-
+            //displays text
             Thread.Sleep(500);
             g.DrawString("Here is your task:", drawFont, drawBrush, 10, 10);
             Thread.Sleep(1500);
@@ -44,16 +44,15 @@ namespace CSGO_B_exicute
             g.Clear(Color.Black);
             Thread.Sleep(2000);
 
+            //clear screen and draw death star
             Thread.Sleep(1000);
             g.Clear(Color.Black);
-
             g.DrawEllipse(drawPen, 100, 100, 250, 250);
             g.DrawRectangle(drawPen, 215, 100, 25, 100);
             g.FillRectangle(blackBrush, 215, 76, 25, 25);
 
+            //draws pie(space ship) and moves across the screen and stops 
             int y = 45;
-
-            //test
             for (int x = this.Width - 10; x >= 195; x = x - 1)
             {
                 //act
@@ -65,10 +64,10 @@ namespace CSGO_B_exicute
                 Thread.Sleep(10);
             }
             int bomby = 45;
-
+            //plays a sound
             SoundPlayer play = new SoundPlayer(Properties.Resources.lazer);
             play.Play();
-
+            // drops a bomb
             while (bomby < 190)
             {
 
@@ -86,10 +85,11 @@ namespace CSGO_B_exicute
             }
             SoundPlayer player = new SoundPlayer(Properties.Resources.boom);
             player.Play();
+            //plays a sound
+            // makes bomb grow
             for (int x = 1; x < 150; x++)
             {
                 //act
-                
                 Thread.Sleep(10);
                 g.Clear(Color.Black);
                 g.FillEllipse(drawBrush, 223 - x / 2, 190 - x / 2, 10 + x, 10 + x);
@@ -101,6 +101,7 @@ namespace CSGO_B_exicute
 
 
             }
+            //end of code
             Thread.Sleep(1000);
             g.Clear(Color.Black);
             g.DrawString("GOOD LUCK", dnewFont, newBrush, 200, 40);
